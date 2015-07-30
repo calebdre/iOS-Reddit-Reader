@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D19482151B69874500C08A31 /* RedditApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19482141B69874500C08A31 /* RedditApi.swift */; };
 		D19915D01B693B30008E9801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19915CF1B693B30008E9801 /* AppDelegate.swift */; };
 		D19915D21B693B30008E9801 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19915D11B693B30008E9801 /* ViewController.swift */; };
 		D19915D51B693B30008E9801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19915D31B693B30008E9801 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D19482141B69874500C08A31 /* RedditApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditApi.swift; sourceTree = "<group>"; };
 		D19915CA1B693B30008E9801 /* hello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19915CE1B693B30008E9801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D19915CF1B693B30008E9801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				D19915D61B693B30008E9801 /* Images.xcassets */,
 				D19915D81B693B30008E9801 /* LaunchScreen.xib */,
 				D19915CD1B693B30008E9801 /* Supporting Files */,
+				D19482141B69874500C08A31 /* RedditApi.swift */,
 			);
 			path = hello;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19482151B69874500C08A31 /* RedditApi.swift in Sources */,
 				D19915D21B693B30008E9801 /* ViewController.swift in Sources */,
 				D19915D01B693B30008E9801 /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +415,7 @@
 				D19915EB1B693B30008E9801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D19915EC1B693B30008E9801 /* Build configuration list for PBXNativeTarget "helloTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				D19915EE1B693B30008E9801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
