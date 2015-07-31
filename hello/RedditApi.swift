@@ -3,7 +3,7 @@ import Foundation
 class RedditApi {
     private let baseUri = "http://reddit.com";
     
-    func getFrontPage(){
+    func getFrontPage(callback: ([NSDictionary]) -> Void){
         getPage("", option: RedditApiReturnOptions.PostTitles){(titleList) in
             let titles = titleList as! [String]
             for title: String in titles{
@@ -22,6 +22,9 @@ class RedditApi {
                 
                 case .PostTitles:
                     callback(self.getPostTitles(data))
+                
+                case .PostTitlesAndMeta:
+                    callback(self.getPostTitlesAndMeta(data))
             }
         };
         
@@ -73,9 +76,27 @@ class RedditApi {
         
         return titles;
     }
+    
+    private func getPostTitlesAndMeta(data:NSData) -> [NSDictionary] {
+        let posts = getPosts(data) as! [NSDictionary]
+        var list = [NSDictionary]()
+        
+        for allPostData: NSDictionary in posts {
+            let postData = allPostData["data"] as! NSDictionary
+            var meta = [String: String]()
+            
+            meta["title"] = postData["title"] as? String
+            meta["domain"] = postData["domain"] as? String
+            
+            list.append(meta)
+        }
+        
+        return list
+    }
 }
 
 enum RedditApiReturnOptions{
     case PostList
     case PostTitles
+    case PostTitlesAndMeta
 }
